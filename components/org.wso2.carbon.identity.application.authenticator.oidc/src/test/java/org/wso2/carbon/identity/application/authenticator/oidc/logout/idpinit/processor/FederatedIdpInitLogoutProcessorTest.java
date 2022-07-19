@@ -89,7 +89,7 @@ import static org.wso2.carbon.identity.application.authenticator.oidc.util.OIDCE
         IdentityDatabaseUtil.class, FrameworkUtils.class, XMLInputFactory.class, DataSource.class,
         UserSessionManagementService.class, OpenIDConnectAuthenticatorDataHolder.class, IdentityTenantUtil.class,
         UserSessionStore.class, ServerSessionManagementService.class})
-@PowerMockIgnore("jdk.internal.reflect.*")
+@PowerMockIgnore({"jdk.internal.reflect.*","org.mockito.*"})
 @WithH2Database(files = {"dbscripts/h2.sql"})
 public class FederatedIdpInitLogoutProcessorTest extends PowerMockTestCase {
 
