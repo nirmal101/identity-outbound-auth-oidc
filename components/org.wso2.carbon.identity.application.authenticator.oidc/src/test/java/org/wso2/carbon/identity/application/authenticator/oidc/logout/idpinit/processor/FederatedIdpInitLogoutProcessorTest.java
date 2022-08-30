@@ -72,7 +72,7 @@ import java.util.UUID;
 import javax.sql.DataSource;
 import javax.xml.stream.XMLInputFactory;
 
-import static org.mockito.Matchers.anyString;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.when;
@@ -89,7 +89,7 @@ import static org.wso2.carbon.identity.application.authenticator.oidc.util.OIDCE
         IdentityDatabaseUtil.class, FrameworkUtils.class, XMLInputFactory.class, DataSource.class,
         UserSessionManagementService.class, OpenIDConnectAuthenticatorDataHolder.class, IdentityTenantUtil.class,
         UserSessionStore.class, ServerSessionManagementService.class})
-@PowerMockIgnore({"jdk.internal.reflect.*"})
+@PowerMockIgnore("jdk.internal.reflect.*")
 @WithH2Database(files = {"dbscripts/h2.sql"})
 public class FederatedIdpInitLogoutProcessorTest extends PowerMockTestCase {
 
